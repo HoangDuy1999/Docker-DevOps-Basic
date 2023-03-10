@@ -3,3 +3,4 @@ Triền khai trên production:
     - vi .profile
     - set -o allexport; source /root/.env; set +o allexport
     - :wq
+    - done
