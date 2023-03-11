@@ -39,7 +39,7 @@ const userRouter = require('./routes/user.route')
 //const MONGO_URL_TEMP = 'mongodb+srv://hoan:hoan18102000@cluster0.mfjrrb8.mongodb.net/girl-galleries?retryWrites=true&w=majority'//`mongodb://root:123456@mongo:27017/askany`;
 console.log({ MONGO_USER, MONGO_PASSWORD, MONGO_IP, MONGO_PORT, MONGO_DATABASE_NAME, REDIS_URL, REDIS_PORT, SESSION_SECRET });
 const MONGO_URL = `mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_PORT}/admin`;
-
+console.log({MONGO_URL});
 const connectWithRetry = () => {
     mongoose.connect(MONGO_URL, {
         useUnifiedTopology: true,
@@ -59,7 +59,7 @@ connectWithRetry();
 
 app.get("/api/v1", (req, res) => {
     console.log("yeah it ran");
-    res.send("<h2>Hi there1</h2>")
+    res.send("<h2>Hi there !!!</h2>")
 })
 
 app.use("/api/v1/posts", postRouter)
