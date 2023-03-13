@@ -61,7 +61,7 @@ app.get("/", (req, res) => {
 
 app.get("/api/v1", (req, res) => {
     console.log("yeah it ran");
-    res.send("<h2>Hi there1</h2>")
+    res.send("<h2>Hi there production</h2>")
 })
 
 app.use("/api/v1/posts", postRouter)
